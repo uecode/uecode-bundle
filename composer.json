@@ -35,6 +35,6 @@
 		"psr-0": {
 			"Uecode\\Bundle\\UecodeBundle": ""
 		}
-	},
-	"target-dir": "Uecode/Bundle/UecodeBundle"
+	}
+//	,"target-dir": "Uecode/Bundle/UecodeBundle"
 }
