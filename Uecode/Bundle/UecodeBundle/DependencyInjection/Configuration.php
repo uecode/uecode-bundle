@@ -31,7 +31,8 @@ class Configuration implements ConfigurationInterface
 			->end();
 
 		// Run through the Uecode bundles that have configs
-		$bundles = Yaml::parse( __DIR__ . '/../Resources/config/bundles.yml' );
+		$bundleConfig = Yaml::parse( __DIR__ . '/../Resources/config/bundles.yml' );
+		$bundles = $bundleConfig[ 'bundles' ];
 		foreach( $bundles as $bundle ) {
 
 			// If the user hasn't loaded the bundle, don't load the config
