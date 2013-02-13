@@ -30,11 +30,11 @@ class Configuration implements ConfigurationInterface
 			->children()
 			->end();
 
-		// Run through the uecode bundles that have configs
+		// Run through the Uecode bundles that have configs
 		$bundles = Yaml::parse( __DIR__ . '/../Resources/config/bundles.yml' );
 		foreach( $bundles as $bundle ) {
 
-			// If the user hasnt loaded the bundle, dont load the config
+			// If the user hasn't loaded the bundle, don't load the config
 			if( !class_exists( $bundle[ 'config' ] ) ) {
 				continue;
 			}
