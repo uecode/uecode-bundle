@@ -5,9 +5,13 @@
  */
 namespace Uecode\Bundle\UecodeBundle\DependencyInjection;
 
+use \Uecode\Bundle\UecodeBundle\DependencyInjection\ConfigurationInterface as UecodeConfiguration;
+use \Uecode\Bundle\UecodeBundle\Exception\InvalidConfigurationException;
+
 use \Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use \Symfony\Component\Config\Definition\ConfigurationInterface;
 
+use \Symfony\Component\Yaml\Yaml;
 
 /**
  * Configuration for the  Bundle
@@ -24,8 +28,28 @@ class Configuration implements ConfigurationInterface
 
 		$rootNode
 			->children()
-			//->append( $this->addNode() )
 			->end();
+
+		// Run through the uecode bundles that have configs
+		$bundles = Yaml::parse( __DIR__ . '/../Resources/config/bundles.yml' );
+		foreach( $bundles as $bundle ) {
+
+			// If the user hasnt loaded the bundle, dont load the config
+			if( !class_exists( $bundle[ 'config' ] ) ) {
+				continue;
+			}
+
+			// Create the config and make sure its implementing Uecodes ConfigurationInterface
+			$config = new $bundle[ 'config' ]( );
+			if( !( $config instanceof UecodeConfiguration ) ) {
+
+				// Otherwise throw an exception
+				throw new InvalidConfigurationException( $bundle[ 'config' ] );
+			}
+
+			// Have the config class append (by reference) to the given rootNode
+			$config->appendTo( $rootNode );
+		}
 
 		return $treeBuilder;
 	}
