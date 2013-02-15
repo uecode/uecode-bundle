@@ -6,7 +6,7 @@
 namespace Uecode\Bundle\UecodeBundle\DependencyInjection;
 
 use \Uecode\Bundle\UecodeBundle\DependencyInjection\ConfigurationInterface as UecodeConfiguration;
-use \Uecode\Bundle\UecodeBundle\Exception\InvalidConfigurationException;
+use \Uecode\Bundle\UecodeBundle\Exception\DependencyInjection\InvalidConfigurationException;
 
 use \Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use \Symfony\Component\Config\Definition\ConfigurationInterface;

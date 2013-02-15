@@ -3,7 +3,7 @@
  * User: Aaron Scherer
  * Date: 2/13/13
  */
-namespace Uecode\Bundle\UecodeBundle\Exception;
+namespace Uecode\Bundle\UecodeBundle\Exception\DependencyInjection;
 
 class InvalidConfigurationException extends \Exception
 {

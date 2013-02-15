@@ -12,4 +12,17 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 /**
  *
  */
-class Config extends ParameterBag {}
+class Config extends ParameterBag
+{
+	public function setItems( array $items, $replace = true )
+	{
+		foreach( $items as $key => $value )
+		{
+			if( $this->has( $key ) ) {
+				if( $replace ) {
+					$this->set( $key, $value );
+				}
+			}
+		}
+	}
+}
