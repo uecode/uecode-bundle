@@ -1,3 +1,5 @@
 bundles:
     amazon:
         config: \Uecode\Bundle\AmazonBundle\DependencyInjection\Configuration
+    daemon:
+        config: \Uecode\Bundle\DaemonBundle\DependencyInjection\Configuration
