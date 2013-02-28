@@ -42,7 +42,7 @@ Argument | Required | Description
 
 Below is an example request to the Sponsored Ad Feed using `GET` parameters to pass the required arguments (including all optional arguments):
 
-[Example Link][1]
+[http://usrv.in/ex/?format=json&pub_id=123&sub_id=456&kw=auto%20insurance&ip=127.0.0.2&xfwd=127.0.0.1&ua=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.17%20(KHTML%2C%20like%20Gecko)%20Chrome%2F24.0.1312.57%20Safari%2F537.17&num=3&url=http%3A%2F%2Fexample.com%2Fsearch&ref=http%3A%2F%2Fwww.google.com&zip=92101][1]
 
 
 
