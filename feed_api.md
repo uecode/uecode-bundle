@@ -43,3 +43,27 @@ Argument | Required | Description
 Below is an example request to the Sponsored Ad Feed using `GET` parameters to pass the required arguments (including all optional arguments):
 
 usrv.in/ex/?format=json&pub_id=123&sub_id=456&kw=auto%20insurance&ip=127.0.0.2&xfwd=127.0.0.1&ua=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)<br/>%20AppleWebKit%2F537.17%20(KHTML%2C%20like%20Gecko)%20Chrome%2F24.0.1312.57%20Safari%2F537.17&num=3&url=http%3A%2F%2Fexample.com%2Fsearch&ref=http%3A%2F%2Fwww.google.com&zip=92101
+
+
+### Example Response:
+
+Below are example responses in both formats, `JSON` and `XML`
+
+#### JSON
+`{
+"meta":{
+"keyword":"auto insurance",
+"zip":92101
+},
+"count":1,
+"ads":[
+{
+"title":"Get Insurance Quotes Today!",
+"desc":"Take Advantage of our Discounts in CA - Safe Drivers can Save 45% or More. Get a Free Online Auto Insurance Quote in Minutes.",
+"display_url":"www.AutoInsuranceQuotes.com",
+"click_url":"http:\/\/tkmtrack.net\/rr\/http\/29.xb4ken.com%252Fmedia%252Fredir.php%253Fprof%253D48%2526camp%253D7071%2526affcode%253Dkw1538426%2526url%253Dhttp%25253A%25252F%25252Fm.xp1.ru4.com%25252Fsclick%25253F_o%25253D15719%252526_t%25253D50373160%252526ssv_knsh_tid%25253D_kenshoo_clickid_%252526ssv_knsh_agid%25253D25046%252526ssv_knsh_cid%25253D7071%252526ssv_knsh_crid",
+"logo":"http:\/\/cpc-images.quick-cdn.com\/8d7c7a55059b5f930642f8509d28da2e.jpg",
+"favicon":"http:\/\/cpc-images.quick-cdn.com\/8d7c7a55059b5f930642f8509d28da2e.jpg"
+}
+]
+}`
