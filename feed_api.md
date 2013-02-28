@@ -1,6 +1,7 @@
-
-# Sponsored Ad Listings Specification and Integration Guide
-  `V6.0 - 2013`
+![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+# Sponsored Ad Listings 
+# Specification and Integration Guide
+	`V6.0 - 2013`
 
 
 ## Getting Started:
