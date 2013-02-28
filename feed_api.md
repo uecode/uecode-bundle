@@ -60,7 +60,8 @@ Below are example responses in both formats, `JSON` and `XML`
 {
   "meta":{
     "keyword":"auto insurance",
-    "zip":92101
+    "zip":92101,
+    "product":"auto insurance"
   },
   "count":1,
   "ads": [
@@ -86,9 +87,10 @@ Below are example responses in both formats, `JSON` and `XML`
 <?xml version="1.0" encoding="UTF-8" ?>
 <response>
   <meta>
-    <keyword>auto insurance</keyword>
-  	<zip>92101</zip>
-	</meta>
+  	<keyword>auto insurance</keyword>
+    <zip>92101</zip>
+		<product>auto insurance</product>
+  </meta>
 	<count>1</count>
   <ads>
     <ad>
