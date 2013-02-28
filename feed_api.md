@@ -1,7 +1,6 @@
-![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
-# Sponsored Ad Listings 
-# Specification and Integration Guide
-	`V6.0 - 2013`
+![](http://banner.uenetwork.org/UElogo.jpg)
+# Sponsored Ad Listings Specification and Integration Guide
+`V6.0 - 2013`
 
 
 ## Getting Started:
@@ -109,6 +108,7 @@ Below are example responses in both formats, `JSON` and `XML`
   </ads>
 </response>
 ```
+
 
 ## Before Querying the Sponsored Ad Feed in Production
 
