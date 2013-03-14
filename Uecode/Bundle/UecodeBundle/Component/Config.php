@@ -18,10 +18,8 @@ class Config extends ParameterBag
 	{
 		foreach( $items as $key => $value )
 		{
-			if( $this->has( $key ) ) {
-				if( $replace ) {
-					$this->set( $key, $value );
-				}
+			if( !$this->has( $key ) || $replace ) {
+				$this->set( $key, $value );
 			}
 		}
 	}
