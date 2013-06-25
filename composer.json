@@ -1,6 +1,5 @@
 {
 	"name":        "uecode/uecode-bundle",
-	"version":     "1.0.0",
 	"type":        "library",
 	"description": "Symfony2 Uecode Bundle",
 	"keywords":    ["php", "uecode"],
