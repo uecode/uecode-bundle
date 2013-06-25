@@ -1,4 +1,6 @@
 bundles:
+    common:
+        config: \Uecode\Bundle\CommonBundle\DependencyInjection\Configuration
     amazon:
         config: \Uecode\Bundle\AmazonBundle\DependencyInjection\Configuration
     daemon:
