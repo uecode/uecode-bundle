@@ -5,3 +5,5 @@ bundles:
         config: \Uecode\Bundle\AmazonBundle\DependencyInjection\Configuration
     daemon:
         config: \Uecode\Bundle\DaemonBundle\DependencyInjection\Configuration
+    lead_management:
+        config: \Uecode\Bundle\LeadManagementBundle\DependencyInjection\Configuration
