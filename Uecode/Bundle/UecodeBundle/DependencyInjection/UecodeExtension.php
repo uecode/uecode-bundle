@@ -21,7 +21,19 @@ class UecodeExtension extends Extension
 	 */
 	public function load( array $configs, ContainerBuilder $container )
 	{
+		// save bundles that are in the Uecode namespace
+		$kernelBundles = $container->getParameter( 'kernel.bundles' );
+		$bundles = array();
+		foreach ( $kernelBundles as $kb ) {
+			$parts = explode('\\', $kb);
+			$last = array_pop($parts);
+			if ($parts[0] == 'Uecode' && strpos( $last, 'Bundle') && $last != 'UecodeBundle' ) {
+				$bundles[] = implode('\\', $parts);
+			}
+		}
+
 		$configuration = new Configuration( $container->getParameter( 'kernel.debug' ) );
+		$configuration->setBundles($bundles);
 		$config = $this->processConfiguration( $configuration, $configs );
 
 		$this->setParameters( $container, $config );

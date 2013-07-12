@@ -19,6 +19,24 @@ use \Symfony\Component\Yaml\Yaml;
 class Configuration implements ConfigurationInterface
 {
 	/**
+	 * Related uecode bundles
+	 *
+	 * @access private
+	 */
+	private $bundles;
+
+	/**
+	 * Set the related uecode bundles
+	 *
+	 * @access public
+	 * @param array $bundles
+	 */
+	public function setBundles(array $bundles)
+	{
+		$this->bundles = $bundles;
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	public function getConfigTreeBuilder()
@@ -30,18 +48,9 @@ class Configuration implements ConfigurationInterface
 			->children()
 			->end();
 
-		// Run through the Uecode bundles that have configs
-		$bundleConfig = Yaml::parse( __DIR__ . '/../Resources/config/bundles.yml' );
-		$bundles = $bundleConfig[ 'bundles' ];
-		foreach( $bundles as $bundle ) {
-
-			// If the user hasn't loaded the bundle, don't load the config
-			if( !class_exists( $bundle[ 'config' ] ) ) {
-				continue;
-			}
-
-			// Create the config and make sure its implementing Uecodes ConfigurationInterface
-			$config = new $bundle[ 'config' ]( );
+		foreach( $this->bundles as $bundle ) {
+			$name = $bundle.'\\DependencyInjection\\Configuration';
+			$config = new $name;
 			if( !( $config instanceof UecodeConfiguration ) ) {
 
 				// Otherwise throw an exception
