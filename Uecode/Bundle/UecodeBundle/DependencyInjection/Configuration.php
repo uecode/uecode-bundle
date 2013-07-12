@@ -50,7 +50,13 @@ class Configuration implements ConfigurationInterface
 
 		foreach( $this->bundles as $bundle ) {
 			$name = $bundle.'\\DependencyInjection\\Configuration';
+
+			if (!class_exists($name)) {
+				continue;
+			}
+
 			$config = new $name;
+
 			if( !( $config instanceof UecodeConfiguration ) ) {
 
 				// Otherwise throw an exception
