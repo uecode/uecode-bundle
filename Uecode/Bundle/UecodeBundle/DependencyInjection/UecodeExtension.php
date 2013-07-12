@@ -25,9 +25,9 @@ class UecodeExtension extends Extension
 		$kernelBundles = $container->getParameter( 'kernel.bundles' );
 		$bundles = array();
 		foreach ( $kernelBundles as $kb ) {
-			$parts = explode('\\', $kb);
-			$last = array_pop($parts);
-			if ($parts[0] == 'Uecode' && strpos( $last, 'Bundle') && $last != 'UecodeBundle' ) {
+			$parts = explode( '\\', $kb );
+			$last = array_pop( $parts );
+			if ( $parts[0] == 'Uecode' && $last != 'UecodeBundle' ) {
 				$bundles[] = implode('\\', $parts);
 			}
 		}
