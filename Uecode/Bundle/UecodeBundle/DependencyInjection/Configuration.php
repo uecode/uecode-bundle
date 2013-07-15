@@ -60,7 +60,7 @@ class Configuration implements ConfigurationInterface
 			if( !( $config instanceof UecodeConfiguration ) ) {
 
 				// Otherwise throw an exception
-				throw new InvalidConfigurationException( $bundle[ 'config' ] );
+				throw new InvalidConfigurationException( 'Invalid configuration for '.get_class($config) );
 			}
 
 			// Have the config class append (by reference) to the given rootNode
