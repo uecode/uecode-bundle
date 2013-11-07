@@ -57,14 +57,12 @@ class Configuration implements ConfigurationInterface
 
 			$config = new $name;
 
-			if( !( $config instanceof UecodeConfiguration ) ) {
+			if( ( $config instanceof UecodeConfiguration ) ) {
 
-				// Otherwise throw an exception
-				throw new InvalidConfigurationException( 'Invalid configuration for '.get_class($config) );
+				// Have the config class append (by reference) to the given rootNode
+				$config->appendTo( $rootNode );
 			}
 
-			// Have the config class append (by reference) to the given rootNode
-			$config->appendTo( $rootNode );
 		}
 
 		return $treeBuilder;
