@@ -17,7 +17,7 @@ This bundle is the connector for the uecode
 	$bundles = array(
 	// ...
 	new Uecode\Bundle\UecodeBundle\UecodeBundle()
-
+```
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/uecode/uecode-bundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
